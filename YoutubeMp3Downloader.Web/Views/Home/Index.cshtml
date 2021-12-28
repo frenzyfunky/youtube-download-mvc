@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <div class="jumbotron jumbotron-fluid d-flex align-items-center position-relative">
+        <div class="blur-bg position-absolute"></div>
+        <div class="container bg-text text-white">
+            <h1 class="display-4 font-weight-bold">Youtube mp3 Downloader</h1>
+            <p>Search the video and get the audio version of it</p>
+        </div>
+    </div>
+    
+</div>
+
+<div class="text-center container">
+    <div class="input-group mb-3">
+        <input id="search-input" type="text" class="form-control" placeholder="Search Term" aria-label="term" aria-describedby="basic-addon1" data-property="q">
+        <button id="search-button" type="button" class="btn btn-primary ml-3" onclick="ui.index.renderViewFromInput('search-results','POST', 'search-input', 'api/search' )">Search</button>
+    </div>
+    <div id="search-results" class="d-flex justify-content-center">
+
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/js/search.js"></script>
+}
